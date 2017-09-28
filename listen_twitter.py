@@ -93,7 +93,7 @@ class ListenTweets(object):
                 red = int(int(rgb.group(1), 16) * 0.39215687)
                 green = int(int(rgb.group(2), 16) * 0.39215687)
                 blue = int(int(rgb.group(3), 16) * 0.39215687)
-                logger.debug(red, green, blue)
+                logger.debug("R:{} G:{} B:{}".format(red, green, blue))
                 self.rodi.pixel(red, green, blue)
         elif rodi_action == 'adelante':
             self.rodi.move_forward()
